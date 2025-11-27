@@ -1,0 +1,35 @@
+/* Base layout and typography */
+:root{
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --accent: #b31217;
+  --muted: #666;
+}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;margin:0;background:var(--bg);color:#111}
+.site-header{display:flex;align-items:center;gap:1rem;padding:1rem;background:var(--card);border-bottom:1px solid #eee}
+.logo{height:48px;width:auto}
+.container{max-width:1100px;margin:1.5rem auto;padding:0 1rem}
+.hero{display:flex;align-items:center;gap:1rem;background:var(--card);padding:1rem;border-radius:6px;overflow:hidden}
+.hero-image{width:60%;height:auto;display:block;border-radius:4px}
+.hero-text{flex:1}
+.content{display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-top:1rem}
+article,aside{background:var(--card);padding:1rem;border-radius:6px}
+.site-footer{text-align:center;padding:1rem;margin-top:1rem;color:var(--muted)}
+
+/* Responsive rules */
+@media (max-width: 900px){
+  .hero{flex-direction:column}
+  .hero-image{width:100%}
+  .content{grid-template-columns:1fr}
+}
+
+@media (max-width: 480px){
+  .site-header{padding:.5rem}
+  .logo{height:36px}
+  .container{margin:1rem auto;padding:0 .75rem}
+  h1{font-size:1.1rem}
+}
+
+/* Utility / accessibility */
+a{color:var(--accent)}
